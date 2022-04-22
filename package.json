@@ -9,7 +9,10 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "d3-scale": "^1.0.4",
+    "d3-selection": "^1.0.3",
+    "web-vitals": "^2.1.4",
+    "react-lag-radar": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
