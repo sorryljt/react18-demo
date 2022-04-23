@@ -1,4 +1,4 @@
-import React, { useState, useTransition } from "react";
+import React, { useState, useTransition, useEffect } from "react";
 import { flushSync } from 'react-dom';
 import "./App.css";
 
@@ -71,7 +71,6 @@ function App() {
 
     const btnClick = () => {
       setCount(count + 1)
-      console.log(visible)
       setVisible(!visible)
       // flushSync(() => {
       //   setCount(count + 1)
@@ -81,7 +80,22 @@ function App() {
       //   setVisible(!visible)
       // })
     }
-    console.log('测试re-render')
+    
+    // setTimeout(() => {
+    //   // setCount(count + 1)
+    //   // setVisible(!visible)
+    //   // flushSync(() => {
+    //   //   setCount(count + 1)
+    //   // })
+      
+    //   // flushSync(() => {
+    //   //   setVisible(!visible)
+    //   // })
+    // }, 1000)
+
+    useEffect(() => {
+      console.log('测试re-render', count, visible)
+    }, [count, visible])
     return (
         <div className="App">
           <div>
